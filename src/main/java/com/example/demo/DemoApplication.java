@@ -52,7 +52,7 @@ public class DemoApplication {
                         URLConnection conn = url.openConnection();
                         if (conn.getContentType().equals("application/pdf")) {
                             InputStream in = conn.getInputStream();
-                            Files.copy(in, Paths.get("C:/pdfBooks/" + bookTitle + ".pdf"));
+                            Files.copy(in, Paths.get(baseDestinationPath + bookTitle + ".pdf"));
                         }
                         System.out.println("=================================");
                         System.out.println("Download of " + bookTitle + " finish");
