@@ -45,6 +45,7 @@ public class DemoApplication {
 
                 String bookTitle = bodyPage.getElementsByClass("page-title").text().replaceAll(":","");
                 File savedBook = new File(fileName);
+                savedBook.getParentFile().mkdirs();
                 if (!savedBook.isFile()) {
                     try {
                         System.out.println("=================================");
