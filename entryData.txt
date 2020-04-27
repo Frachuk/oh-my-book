@@ -115,7 +115,6 @@ http://link.springer.com/openurl?genre=book&isbn=978-1-4612-4374-8
 http://link.springer.com/openurl?genre=book&isbn=978-3-319-59731-7
 http://link.springer.com/openurl?genre=book&isbn=978-3-319-22309-4
 http://link.springer.com/openurl?genre=book&isbn=978-3-642-30319-7
-http://link.springer.com/openurl?genre=book&isbn=978-3-319-32185-1
 http://link.springer.com/openurl?genre=book&isbn=978-1-4614-2212-9
 http://link.springer.com/openurl?genre=book&isbn=978-3-662-49887-3
 http://link.springer.com/openurl?genre=book&isbn=978-94-007-5757-8
