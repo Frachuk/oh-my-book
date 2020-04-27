@@ -28,7 +28,7 @@ public class DemoApplication {
 
         ArrayList<String> URLS = new ArrayList<>();
         final String baseUrl = "https://link.springer.com";
-        final String baseDestinationPath = "C:/pdfBooks/";
+        final String baseDestinationPath = System.getProperty("user.home") + "/Downloads/pdfBooks/";
 
         try (Stream<String> lines = Files.lines(Paths.get("entryData.txt"))) {
             lines.forEach(URLS::add);
@@ -36,13 +36,15 @@ public class DemoApplication {
 
         URLS.forEach(internalUrl -> {
             try {
+                String fileName = baseDestinationPath + bookTitle + ".pdf";
+                
                 Document bodyPage = Jsoup.connect(internalUrl)
                         .userAgent("Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6")
                         .header("Cookie", "_ga=GA1.2.1089563400.1587765106; _gid=GA1.2.431778682.1587765106; PHPSESSID=i1fmkuuh8mi6vcfqkp4ookm987")
                         .get();
 
                 String bookTitle = bodyPage.getElementsByClass("page-title").text().replaceAll(":","");
-                File savedBook = new File(baseDestinationPath + bookTitle + ".pdf");
+                File savedBook = new File(fileName);
                 if (!savedBook.isFile()) {
                     try {
                         System.out.println("=================================");
@@ -52,7 +54,7 @@ public class DemoApplication {
                         URLConnection conn = url.openConnection();
                         if (conn.getContentType().equals("application/pdf")) {
                             InputStream in = conn.getInputStream();
-                            Files.copy(in, Paths.get(baseDestinationPath + bookTitle + ".pdf"));
+                            Files.copy(in, Paths.get(fileName));
                         }
                         System.out.println("=================================");
                         System.out.println("Download of " + bookTitle + " finish");
