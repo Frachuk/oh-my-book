@@ -403,5 +403,4 @@ http://link.springer.com/openurl?genre=book&isbn=978-981-13-8759-3
 http://link.springer.com/openurl?genre=book&isbn=978-3-030-19182-5
 http://link.springer.com/openurl?genre=book&isbn=978-3-030-20290-3
 http://link.springer.com/openurl?genre=book&isbn=978-3-030-25943-3
-http://link.springer.com/openurl?genre=book&isbn=978-3-030-19128-3
 http://link.springer.com/openurl?genre=book&isbn=978-1-4939-9621-6
